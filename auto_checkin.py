@@ -83,7 +83,7 @@ def main():
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print("Usage: auto_checkout Username Password")
+        print("Usage: auto_checkin Username Password")
     else:
         USER = sys.argv[1]
         PASSWD = sys.argv[2]
