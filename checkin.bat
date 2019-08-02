@@ -14,7 +14,7 @@ set /a num=%RANDOM%%%60
 if %num% lss 10 (set num=0%num%)
 echo schtasks /Create /f /tn checkin /sc once /sd %DstDate% /st 09:%num% /tr "%PROJECT_PATH%\auto_checkin.exe %USERNAME% %PASSWORD%"
 schtasks /Create /f /tn checkin /sc once /sd %DstDate% /st 09:%num% /tr "%PROJECT_PATH%\auto_checkin.exe %USERNAME% %PASSWORD%"
-pause
+:pause
 goto :eof
 
 :DateToDays %yy% %mm% %dd% days
