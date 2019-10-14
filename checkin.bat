@@ -4,6 +4,9 @@ set USERNAME=shizhenhua
 set PASSWORD=yish8866983
 set PROJECT_PATH=D:\Project\python\autocheckin
 
+if %date:~-2% == 周六 (exit 0)
+if %date:~-2% == 周日 (exit 0)
+
 set DaysAgo=-1
 if %date:~-2% == 周五 (set DaysAgo=-3)
 call :DateToDays %date:~0,4% %date:~5,2% %date:~8,2% PassDays
