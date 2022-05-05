@@ -19,6 +19,10 @@ browser = None
 
 def login(user, password):
     browser.get(LOGIN_URL)
+    print("get", LOGIN_URL)
+
+    wait = WebDriverWait(browser,10,0.5)
+    wait.until(lambda diver:browser.find_element_by_id('login_user'))
     browser.find_element_by_id("login_user").send_keys(user)
     browser.find_element_by_id("login_pswd").send_keys(password)
     browser.find_element_by_id("login_btn").click()
@@ -65,8 +69,10 @@ def run():
     login(USER, PASSWD)
     browser.get(INDEX_URL)
     if browser.find_element_by_class_name('signIn1').is_displayed():
+        print("checkin")
         checkin()
     elif browser.find_element_by_class_name('signOut1').is_displayed():
+        print("checkout")
         checkout()
         checkout_confirm()
     else:

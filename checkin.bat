@@ -1,8 +1,8 @@
 @echo off
 
 set USERNAME=shizhenhua
-set PASSWORD=yish8866983
-set PROJECT_PATH=D:\Project\python\autocheckin
+set PASSWORD=Yish8866983
+set PROJECT_PATH=E:\Projects\python\autocheckin
 
 if %date:~-2% == ÷‹¡˘ (exit 0)
 if %date:~-2% == ÷‹»’ (exit 0)
